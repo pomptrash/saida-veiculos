@@ -1,5 +1,6 @@
-import { KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import {Home} from './src/telas/home'
+import { Feather } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -9,6 +10,10 @@ export default function App() {
           <Home/>
         </SafeAreaView>
       </ScrollView>
+      <TouchableOpacity style={styles.newExitButton}>
+        <Feather name='plus' size={40} color={'white'}></Feather>
+      </TouchableOpacity>
+
     </KeyboardAvoidingView>
   );
 }
@@ -21,4 +26,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 50
   },
+
+  newExitButton:{
+    backgroundColor: '#033',
+    width:70,
+    height:70,
+    borderRadius: 50,
+    position: 'absolute',
+    bottom: 40,
+    left: '75%',
+    justifyContent:'center',
+    alignItems: 'center'
+  }
 });

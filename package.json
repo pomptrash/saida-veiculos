@@ -14,7 +14,9 @@
     "@react-navigation/native-stack": "^7.3.26",
     "expo": "~53.0.22",
     "expo-status-bar": "~2.2.3",
+    "feather-icons": "^4.29.2",
     "react": "19.0.0",
+    "react-feather": "^2.0.10",
     "react-native": "0.79.6"
   },
   "devDependencies": {

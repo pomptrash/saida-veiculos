@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { Card } from "../../componentes/card/";
 import { styles } from "./styles";
 
