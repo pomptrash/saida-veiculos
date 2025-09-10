@@ -2,9 +2,10 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    alignSelf:'center',
+    flex: 1,
     gap: 30,
     width: 350,
+    alignSelf:'center'
   },
   title: {
     fontWeight: "bold",

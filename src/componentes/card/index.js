@@ -1,25 +1,25 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
-import { styles, statusColors } from "./styles";
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native'
+import { styles, statusColor } from './styles'
 
-export function Card({ carro, cor, km, placa, status, image }) {
-  return (
-    <TouchableOpacity style={styles.card}>
-      <View
-        style={[
-          styles.status,
-          { backgroundColor: statusColors[status] || "#033" },
-        ]}
-      >
-        <Text style={styles.text}>{status}</Text>
-      </View>
-      <Image source={image} style={styles.carImage} />
 
-      <View style={styles.carDetails}>
-        <Text style={styles.text}>{carro}</Text>
-        <Text style={styles.text}>Cor: {cor}</Text>
-        <Text style={styles.text}>Km Atual: {km}</Text>
-        <Text style={styles.text}>Placa: {placa}</Text>
+export function Card({plate, status}){
+  return(
+    <View style={{alignItems: 'center', gap: 3}}>
+      <TouchableOpacity style={styles.container}>
+        <View style={styles.header}>
+          <Image source={require('../../../assets/mercosul-flag.png')} style={styles.image}/>
+          <Text style={styles.headerText}>brasil</Text>
+          <Image source={require('../../../assets/brazil-flag-icon.png')} style={styles.image}/>
+        </View>
+        <View style={styles.plate}>
+        <Text style={styles.plateText}>{plate}</Text>
+        </View>
+        <Text style={styles.BR}>BR</Text>
+      </TouchableOpacity>
+      <View style={[styles.status, {backgroundColor: statusColor[status] || '#000'}]}>
+        <Text style={{color: '#fff'}}>{status}</Text>
       </View>
-    </TouchableOpacity>
-  );
+    </View>
+  )
 }
+

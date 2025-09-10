@@ -1,53 +1,69 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
-    card:{
-        backgroundColor:"#fff9",
-        width: 340,
-        height: 200,
-        borderRadius: 16,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        padding: 10,
-        gap: 8,
-        borderBottomWidth: 3,
-        borderRightWidth: 3,
-        borderColor: '#0002'
-    },
+  container:{
+    width: 160,
+    height: 70,
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    borderRightWidth: 2,
+    borderBottomWidth:2,
+    borderColor: '#0004',
+  },
 
-    carImage:{
-        width:180,
-        height:100,
-        alignSelf: 'center'
-    },
+  header:{
+    backgroundColor: '#00f',
+    height: 25,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    padding: 5,
+    borderTopRightRadius: 8,
+    borderTopLeftRadius: 8,
+  },
+  headerText:{
+    color:'#fff',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+  },
 
-    carDetails:{
-        width: 130,
-        height: 160,
-        padding: 10,
-        borderRadius: 8
-    },
-    text:{
-        color: '#000',
-        fontWeight:'bold',
-        textTransform: 'uppercase'
-    },
-    status:{
-        backgroundColor:'red',
-        width: 150,
-        height: 25,
-        position: 'absolute',
-        bottom: -10,
-        borderRadius: 8,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
+  image:{
+    width: 20,
+    height: 15
+  },
+
+  plate:{
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 5
+  },
+
+  plateText:{
+    fontSize: 28,
+    fontWeight: 'bold',
+  },
+
+  BR:{
+    position: 'absolute',
+    bottom: 0,
+    left: 5,
+    fontSize: 10,
+    fontWeight: 'bold'
+  },
+
+  status: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 3, 
+    width: 100,
+    borderRadius: 8
+  }
 })
 
-export const statusColors = {
-  'disponível': '#4CAF50',    // Verde
-  'reservado': '#FF9800',     // Laranja
-  'em uso': '#2196F3',      // Azul
-  'manutenção': '#FFEB3B',    // Amarelo (talvez com texto escuro)
-  'indisponível': '#F44336'   // Vermelho
-};
+export const statusColor = {
+  'disponível': '#4CAF50',
+  'reservado': '#FF9800',
+  'em uso': '#2196F3',
+  'manutenção': '#FFEB3B',
+  'indisponível': '#F44336'
+}
