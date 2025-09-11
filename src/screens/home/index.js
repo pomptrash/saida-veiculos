@@ -1,16 +1,16 @@
 import { View, Text, ScrollView } from "react-native";
-import { Card } from "../../componentes/card/";
+import { Card } from "../../components/card";
 import { styles } from "./styles";
-import { useCars } from "../../contextos/carros";
+import { useCars } from "../../contexts/carsContext";
 
 export function Home() {
-  const { carros } = useCars()
+  const { cars } = useCars()
 
   return (
     <ScrollView contentContainerStyle={styles.container} style={{flex:1, marginBottom: 40}} >
       <Text style={styles.title}>Veículos</Text>
       <View style={styles.carList}>
-        {carros.map((carro) => (
+        {cars.map((carro) => (
           <Card plate={carro.plate} key={carro.plate} status={carro.status} />
         ))}
       </View>

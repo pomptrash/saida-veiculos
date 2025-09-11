@@ -1,10 +1,8 @@
-import { KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
-import {Home} from './src/telas/home'
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import { Feather } from "@expo/vector-icons";
-import { CarsProvider } from './src/contextos/carros';
-import { AvailableCars } from './src/telas/availableCars';
-import { Routes } from './src/rotas';
+import { Routes } from './src/routes';
 import "react-native-gesture-handler";
+import { CarsProvider } from './src/contexts/carsContext';
 
 
 export default function App() {
@@ -14,7 +12,6 @@ export default function App() {
       <TouchableOpacity style={styles.newExitButton} >
           <Feather name="plus" size={40} color={"white"}></Feather>
         </TouchableOpacity>
-
     </CarsProvider>
   );
 }

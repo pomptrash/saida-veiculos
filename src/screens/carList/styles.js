@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 38,
     marginTop: 30,
+    textTransform:'uppercase'
   },
   carList:{
     flexDirection: 'row',

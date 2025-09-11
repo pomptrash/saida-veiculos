@@ -54,16 +54,21 @@ export const styles = StyleSheet.create({
   status: {
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 3, 
-    width: 100,
-    borderRadius: 8
+    paddingVertical: 5,
+    paddingHorizontal: 10, 
+    borderRadius: 8,
+  },
+  statusText:{
+    textTransform: 'uppercase',
+    fontSize: 16
   }
 })
 
 export const statusColor = {
   'disponível': '#4CAF50',
-  'reservado': '#FF9800',
+  'reservado': '#00BCD4',
   'em uso': '#2196F3',
   'manutenção': '#FFEB3B',
-  'indisponível': '#F44336'
-}
+  'indisponível': '#F44336',
+  'solicitado': '#9C27B0',
+};
