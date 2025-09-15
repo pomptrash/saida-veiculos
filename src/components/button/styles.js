@@ -2,8 +2,8 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     button: {
-        height: 40,
-        padding: 10,
+        padding: 15,
+        paddingHorizontal: 20,
         borderRadius: 16,
         borderWidth:1,
         borderColor: '#000',
@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     btnText:{
         fontSize: 14,
         fontWeight: 'bold',
-        color: '#fff',
+        color: '#000',
         textTransform: 'uppercase'
     }
 })

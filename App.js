@@ -1,6 +1,7 @@
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import { Feather } from "@expo/vector-icons";
 import { Routes } from './src/routes';
+import { Login } from './src/screens/auth/login';
 import "react-native-gesture-handler";
 import { CarsProvider } from './src/contexts/carsContext';
 
@@ -8,6 +9,7 @@ import { CarsProvider } from './src/contexts/carsContext';
 export default function App() {
   return (
     <CarsProvider>
+      {/* <Login/> */}
       <Routes/>
       <TouchableOpacity style={styles.newExitButton} >
           <Feather name="plus" size={40} color={"white"}></Feather>

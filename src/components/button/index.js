@@ -1,10 +1,10 @@
 import { TouchableOpacity,Text } from "react-native";
 import { styles } from "./styles";
 
-export function Button({text}){
+export function Button({text, onPress}){
     return(
-        <TouchableOpacity style={[styles.button, {backgroundColor: text==='recusar'? '#e33': '#033'}]}>
-            <Text style={styles.btnText}>{text}</Text>
+        <TouchableOpacity onPress={onPress} style={[styles.button, {backgroundColor: text==='recusar'? '#e33': '#fff'}]}>
+            <Text style={[styles.btnText, {color: text==='recusar'? '#fff': '#000'}]}>{text}</Text>
         </TouchableOpacity>
     )
 }
