@@ -2,16 +2,16 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    alignSelf:'center',
     gap: 30,
     width: 350,
-    alignSelf:'center'
+    flex: 1, 
+    marginBottom: 40
   },
   title: {
     fontWeight: "bold",
     fontSize: 38,
     marginTop: 30,
-    textTransform:'uppercase'
   },
   carList:{
     flexDirection: 'row',

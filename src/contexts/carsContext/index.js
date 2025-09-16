@@ -54,6 +54,41 @@ export function CarsProvider({ children }) {
       status: "disponível",
       image: require("../../../assets/imagens/carros/hb20-cinza.png"),
     },
+    {
+      carro: "Fiat Argo",
+      cor: "Vermelho",
+      km_atual: 18700,
+      plate: "XYZ9A87",
+      status: "disponível",
+    },
+    {
+      carro: "Hyundai HB20",
+      cor: "Cinza",
+      km_atual: 34250,
+      plate: "BCD6E54",
+      status: "reservado",
+    },
+    {
+      carro: "Renault Kwid",
+      cor: "Laranja",
+      km_atual: 8900,
+      plate: "FGH3I21",
+      status: "solicitado",
+    },
+    {
+      carro: "Jeep Compass",
+      cor: "Verde",
+      km_atual: 45600,
+      plate: "JKL8M76",
+      status: "em uso",
+    },
+    {
+      carro: "Nissan Kicks",
+      cor: "Marrom",
+      km_atual: 23100,
+      plate: "NOP5R43",
+      status: "manutenção",
+    },
   ];
 
   return (
