@@ -19,7 +19,7 @@ export function CarsProvider({ children }) {
       cor: "Preto",
       km_atual: 18765,
       plate: "EFG4H56",
-      status: "reservado",
+      status: "em uso",
       image: require("../../../assets/imagens/carros/civic-preto.png"),
     },
     {

@@ -1,19 +1,33 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Carlist } from "../screens/carList";
 import { CarDetails } from "../screens/carDetails";
+import { Login } from "../screens/auth/login";
+import { TabRoutes } from "./tab.routes";
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
-// NAVEGAÇÃO EM PILHA PARA NAVEGAR ENTRE A LISTA DE VEÍCULOS (SEPARADOS POR STATUS NA NAVEGAÇÃO DRAWER) E OS DETALHES DE CADA VEÍCULO INDIVIDUALMENTE
-
-// RECEBE A PROP STATUS DA NAVEGAÇÃO DRAWER
-
-export function StackRoutes({status}){
-    return (
-        <Stack.Navigator   screenOptions={{headerStyle: {backgroundColor: '#eee'}, headerShadowVisible: false}}>
-            {/* PASSA STATUS (statusProp) PARA O COMPONENTE CARLIST QUE LISTA OS VEÍCULOS DE CADA STATUS */}
-            <Stack.Screen options={{headerShown:false}} name="CarList" component={Carlist} initialParams={{statusProp: status}}/>
-            <Stack.Screen name="Detalhes" component={CarDetails} options={{headerTitle:'Detalhes'}}/>
-        </Stack.Navigator>
-    )
+export function StackRoutes() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: { backgroundColor: "#eee" },
+        headerShadowVisible: false,
+      }}
+    >
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Home"
+        component={TabRoutes}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Detalhes"
+        component={CarDetails}
+        options={{ headerTitle: "Detalhes" }}
+      />
+    </Stack.Navigator>
+  );
 }
