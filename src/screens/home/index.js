@@ -3,14 +3,17 @@ import { styles } from "./styles";
 import { Carlist } from "../carList";
 import { useCars } from "../../contexts/carsContext";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useUserContext } from "../../contexts/userContext";
 
 export function Home() {
   const { cars } = useCars();
+  const { loggedUser } = useUserContext() 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={{ padding: 10 }}>
         <View style={styles.header}>
-          <Text style={styles.title}>Bem vindo, usuário</Text>
+          <Text style={styles.title}>Bem vindo, {loggedUser?.nome}</Text>
+          <Text style={styles.description}>Tipo de usuário: {loggedUser.tipoUsuario} </Text>
         </View>
         <View style={styles.detailsOutterBorder}>
           <View style={styles.details}>

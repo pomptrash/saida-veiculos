@@ -15,6 +15,10 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 38,
   },
+  description:{
+    fontSize:15,
+    fontWeight:'bold'
+  },
 
   text: {
     fontSize: 32,
